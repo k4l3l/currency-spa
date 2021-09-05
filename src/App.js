@@ -86,7 +86,9 @@ function App() {
   
   useEffect(() => {
       const isCached = !!parseInt(localStorage.getItem("cached"));
-      if (!isCached) {
+      const date = Number(localStorage.getItem("date"));
+      // if no date no cached info or if 24h have passed since last fetch
+      if (!isCached || !date || (Date.now() - date) > (1000 * 60 * 60 * 24)) {
         console.log('getting data');
         fetchData();
       } else {
