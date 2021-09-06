@@ -5,7 +5,25 @@
 	justify-content: flex-start;
 	align-items: stretch;
 	align-content: stretch;
-  padding: 2rem;
+  
+  min-height: 100vh;
+  background-color: steelblue;
+  color: white;
+}
+
+.heading {
+  background-color: rgb(34,73,112);
+}
+
+#currencies {
+  color: white;
+  background-color: steelblue;
+  box-shadow: 2px 2px 7px 1px #224970;
+  min-width: 4rem;
+  min-height: 2rem;
+  font-size: medium;
+  border-color: steelblue;
+  border-radius: 5px;
 }
 
 .groups {
@@ -16,11 +34,14 @@
 	justify-content: flex-start;
 	align-items: stretch;
 	align-content: stretch;
-  padding: 0;
+}
+
+.padding {
+  padding: 1rem;
 }
 
 .group {
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 
 @keyframes App-logo-spin {

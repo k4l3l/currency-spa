@@ -104,14 +104,14 @@ function App() {
 
   return (
     <div className="App">
-      <div>
+      <div className="heading padding">
         <h3>Please select a currency</h3>
         <select name="currencies" id="currencies" onChange={getCurrencies}>
           {currs && currs.map( (c,i) => <option value={c} key={i}>{c}</option>)}
         </select>
       </div>
-      <p>Selected currency rates: </p>
-      <ul className="groups">
+      <p className="padding">Selected currency rates: </p>
+      <ul className="groups padding">
       <div className="group">      
         <p>Group 1</p>
         {groupOne.map((c,i) => <li key={i}><b>{c.name.toUpperCase()}:</b> {c.value}</li>)}
@@ -128,7 +128,7 @@ function App() {
         <p>Count: {groupThree.length}</p>
       </div>
       </ul>
-      <h4>Longest count: {longestCount}</h4>
+      <h4 className="padding">Longest count: {longestCount}</h4>
     </div>
   );
 }
