@@ -30,21 +30,18 @@ function App() {
     let startIdx = 0;
     let idx = 1;
     for (let i = 0; i < arr.length-1; i++) {
-      if (Math.abs(arr[i].value - arr[i+1].value) <= 0.5) {
-        if (Math.abs(arr[startIdx].value - arr[i+1].value) <= 0.5) {
-          count++;
-        } else {
+      if ((Math.abs(arr[i].value - arr[i+1].value) <= 0.5) && (Math.abs(arr[startIdx].value - arr[i+1].value) <= 0.5)) {        
+          count++;      
+      } else {
           if (max < count) {
             max = count;            
           } 
           count = 1;
           startIdx = idx;
-          i = idx++;          
-        }
-      } else {
-          count = 1;
-          startIdx = idx;
-          i = idx++;
+          i = idx++ - 1;
+      }
+      if (max < count) {
+          max = count;
       }
     }
     return max;
